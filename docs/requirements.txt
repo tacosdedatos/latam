@@ -1,0 +1,8 @@
+myst-nb==0.8.4
+sphinx-tabs==1.1.13
+sphinxcontrib-bibtex==1.0.0
+sphinx-book-theme==0.0.27
+importlib_metadata==1.6.1
+tacosdedatos-utils
+pandas==1.0.5
+ipython==7.16.1
