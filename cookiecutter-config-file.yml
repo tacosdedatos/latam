@@ -1,0 +1,10 @@
+# This file contains values from Cookiecutter
+
+default_context:
+  project_name: "latam"
+  project_description: "Un paquete para trabajar facilmente con metadatos de paises en latinoamerica."
+  organization: "tacosdedatos"
+  license: "BSD-3"
+  version: "0.1.0"
+  github_name: "tacosdedatos"
+  email: "chekos@tacosdedatos.com"
