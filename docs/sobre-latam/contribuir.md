@@ -12,7 +12,7 @@ Puedes contribuir de muchas maneras:
 
 ### Reportar _bugs_ o errores
 
-Reportalos en <https://github.com/tacosdedatos/tacosdedatos-utils/issues>.
+Reportalos en <https://github.com/tacosdedatos/latam/issues>.
 
 Si estas reportando un _bug_, porfa íncluye:
 
@@ -23,24 +23,24 @@ Si estas reportando un _bug_, porfa íncluye:
 
 ### Corregir _bugs_ o errores
 
-Puedes revistar los _issues_ en GitHub ([tacosdedatos/tacosdedatos-utils](https://github.com/tacosdedatos/tacosdedatos-utils/issues)).
+Puedes revistar los _issues_ en GitHub ([tacosdedatos/latam](https://github.com/tacosdedatos/latam/issues)).
 Cualquiera con la etiqute _"bug"_ y _"ayuda pls"_ esta abierto a quien quiera implementar la solución.
 
 ### Implementar _Features_ o funciones 
 
-Puedes revistar los _issues_ en GitHub ([tacosdedatos/tacosdedatos-utils](https://github.com/tacosdedatos/tacosdedatos-utils/issues)).
+Puedes revistar los _issues_ en GitHub ([tacosdedatos/latam](https://github.com/tacosdedatos/latam/issues)).
 Cualquiera con la etiqute _"mejora"_ y _"ayuda pls"_ esta abierto a quien quiera implementar la solución.
 
 
 ### Escribir documenteishon
 
-`tacosdedatos-utils` siempre puede utilizar más documentación. Ya sea en 
+`latam` siempre puede utilizar más documentación. Ya sea en 
 los _docs_ oficiales, en docstrings, o en la web con publicaciónes en blogs, artículos y mucho más.
 
 ### Enviar comentarios
 
 La mejor manera de proveer retroalimentación es crear un _issue_ en 
-<https://github.com/tacosdedatos/tacosdedatos-utils/issues>.
+<https://github.com/tacosdedatos/latam/issues>.
 
 Si estás proponiendo una mejora:
 
@@ -53,19 +53,19 @@ Si estás proponiendo una mejora:
 ¡Comencemos!
 ------------
 
-¿Listx para contribuir? Aquí esta como configurar [tacosdedatos-utils](#tacosdedatos-utils) 
+¿Listx para contribuir? Aquí esta como configurar [latam](#latam) 
 para desarrollo local.
 
-1.  Crea un _fork_ del repositorio en GitHub [tacosdedatos-utils]{#tacosdedatos-utils}.
+1.  Crea un _fork_ del repositorio en GitHub [latam]{#latam}.
 
 2.  Clona tu _fork_ localmente:
 
-        $ git clone https://github.com/tu_cuenta_de_github/tacosdedatos-utils.git
+        $ git clone https://github.com/tu_cuenta_de_github/latam.git
 
-3.  Instala tu copia local en un entorno virtual. Con `tacosdedatos-utils` utilizamos `poetry`
+3.  Instala tu copia local en un entorno virtual. Con `latam` utilizamos `poetry`
     Asumiendo que lo tengas instalado, así es como configurars tu _fork_ para desarrollo local:
 
-        $ cd tacosdedatos-utils/
+        $ cd latam/
         $ make install
         $ poetry shell # para activar tu entorno virtual 
     ```{admonition} Si no tienes instalado poetry
@@ -79,7 +79,7 @@ para desarrollo local.
     Ahora puedes hacer cambios locales.
 
 5.  Cuando termines de hacer tus cambios, asegurate que tus cambios pasen
-    los _tests_, el estilo de código y las medidas de seguridad que utilizamos en `tacosdedatos-utils`
+    los _tests_, el estilo de código y las medidas de seguridad que utilizamos en `latam`
     esto es fácil de hacer con los siguientes comando:
 
         $ make codestyle
@@ -117,7 +117,7 @@ Para ejecutar los _tests_
 ## Publicación
 
 Un recordatorio para quienes mantienen el paquete. Asegurate que todos tus cambios esten
-_cometidos_ (incluyendo una entrada a `sobre-tacosdedatos-utils/historia.md`).
+_cometidos_ (incluyendo una entrada a `sobre-latam/historia.md`).
 
 Luego ejecuta:
 
