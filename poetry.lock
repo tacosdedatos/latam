@@ -428,6 +428,14 @@ checkqa_mypy = ["mypy (0.780)"]
 testing = ["argcomplete", "hypothesis (>=3.56)", "mock", "nose", "requests", "xmlschema"]
 
 [[package]]
+name = "pytz"
+version = "2020.1"
+description = "World timezone definitions, modern and historical"
+category = "main"
+optional = false
+python-versions = "*"
+
+[[package]]
 name = "pyupgrade"
 version = "2.7.2"
 description = "A tool to automatically upgrade syntax for newer versions."
@@ -653,7 +661,7 @@ testing = ["pytest (>=3.5,<3.7.3 || >3.7.3)", "pytest-checkdocs (>=1.2.3)", "pyt
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.7"
-content-hash = "68f00277b73cfc3e522a4b26d3dbfe2b747918d0961c322e3b9f39440d1f12db"
+content-hash = "7d71871c92cab59cad56884ec4fbdb4728a0d349aad5fb31860f981fc99b108f"
 
 [metadata.files]
 appdirs = [
@@ -841,6 +849,10 @@ pyparsing = [
 pytest = [
     {file = "pytest-6.1.1-py3-none-any.whl", hash = "sha256:7a8190790c17d79a11f847fba0b004ee9a8122582ebff4729a082c109e81a4c9"},
     {file = "pytest-6.1.1.tar.gz", hash = "sha256:8f593023c1a0f916110285b6efd7f99db07d59546e3d8c36fc60e2ab05d3be92"},
+]
+pytz = [
+    {file = "pytz-2020.1-py2.py3-none-any.whl", hash = "sha256:a494d53b6d39c3c6e44c3bec237336e14305e4f29bbf800b599253057fbb79ed"},
+    {file = "pytz-2020.1.tar.gz", hash = "sha256:c35965d010ce31b23eeb663ed3cc8c906275d6be1a34393a1d73a41febf4a048"},
 ]
 pyupgrade = [
     {file = "pyupgrade-2.7.2-py2.py3-none-any.whl", hash = "sha256:24cbd268be09c3df8ab431dfb31d7c84dee7adccfa27b8af4443386484ad736d"},
