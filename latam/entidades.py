@@ -1,9 +1,9 @@
-from typing import Any, Dict, Iterable, List, Optional, Tuple, Union
+"""Módulo con las clases base de cada entidad: `Ciudad`, `Subdivision`, `Pais`."""
+
+from typing import Dict, List, Optional, Tuple
 
 import datetime as dt
 from dataclasses import dataclass
-
-from pytz import timezone
 
 
 @dataclass

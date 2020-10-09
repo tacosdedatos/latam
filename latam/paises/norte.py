@@ -1,3 +1,4 @@
+"""Módulo con los paises de norteamérica."""
 import datetime as dt
 
 from pytz import timezone
