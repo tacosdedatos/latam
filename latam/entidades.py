@@ -37,7 +37,7 @@ class Ciudad:
     nombre_pronunciacion_local: str
     latlong: Tuple[float, float]
     fecha_de_fundacion: dt.date
-    huso_horario: timezone
+    huso_horario: dt.tzinfo
 
     def __repr__(self):
         return f"<{self.__class__.__name__}:{self.nombre_comun}>"
@@ -83,12 +83,12 @@ class Subdivision:
     nombre_pronunciacion_local: str
     codigo: str
     capital: Ciudad
-    capital_horario: timezone
+    capital_horario: dt.tzinfo
     capital_latlong: Tuple[float, float]
     es_contigua: bool
     es_isla: bool
     fecha_de_fundacion: dt.date
-    husos_horarios: List[timezone]
+    husos_horarios: List[dt.tzinfo]
     ciudades_grandes: Dict[str, Ciudad]
 
     def __repr__(self):
@@ -141,12 +141,12 @@ class Pais:
     alpha_3: str
     codigo: str
     capital: str
-    capital_horario: timezone
+    capital_horario: dt.tzinfo
     capital_latlong: Tuple[float, float]
     es_independiente: bool
     fecha_independencia: Optional[dt.date]
     es_isla: bool
-    husos_horarios: List[timezone]
+    husos_horarios: List[dt.tzinfo]
     subdivisiones: Dict[str, Subdivision]
 
     def __repr__(self):
