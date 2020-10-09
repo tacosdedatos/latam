@@ -8,6 +8,7 @@ from enum import Enum
 import typer
 from latam import __version__
 from latam.example import hello
+from latam.paises import *
 from rich.console import Console
 
 
