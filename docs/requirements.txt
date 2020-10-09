@@ -5,4 +5,4 @@ sphinx-book-theme==0.0.27
 importlib_metadata==1.6.1
 tacosdedatos-utils
 pandas==1.0.5
-ipython==7.16.1
+ipython==7.18.1
