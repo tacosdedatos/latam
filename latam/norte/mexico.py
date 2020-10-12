@@ -363,6 +363,49 @@ GTO = Subdivision(
     ciudades_grandes={"Guanajuato": guanajuato, "León": leon},
 )
 
+chilpancingo = Ciudad(
+    nombre="Chilpancingo de los Bravo",
+    nombre_comun="Chilpancingo",
+    otros_nombres=[
+        "Ciudad Bravo",
+        "Lugar de Avispa",
+        "Chilpantsinko (Nahuatl)",
+    ],
+    abrev="CHIL",
+    nombre_pronunciacion_local="tʃil.pan'.siŋ.ɡo",
+    latlong=(17.55, -99.50),
+    fecha_de_fundacion=dt.date(1591, 11, 1),
+    huso_horario=timezone("America/Mexico_City"),
+)
+
+acapulco = Ciudad(
+    nombre="Acapulco de Juarez",
+    nombre_comun="Acapulco",
+    otros_nombres=["La Perla del Pacífico"],
+    abrev="ACA",
+    nombre_pronunciacion_local="aka'.pul.ko",
+    latlong=(16.86, -99.88),
+    fecha_de_fundacion=dt.date(1550, 3, 12),
+    huso_horario=timezone("America/Mexico_City"),
+)
+
+GRO = Subdivision(
+    nombre="Guerrero",
+    nombre_comun="Guerrero",
+    nombres_nativos={},
+    abrev="GRO",
+    nombre_pronunciacion_local="ɡe'.re.ɾo",
+    codigo="GRO",
+    capital=chilpancingo,
+    capital_horario=timezone("America/Mexico_City"),
+    capital_latlong=chilpancingo.latlong,
+    es_contigua=True,
+    es_isla=False,
+    fecha_de_fundacion=dt.date(1849, 10, 27),
+    husos_horarios=[timezone("America/Mexico_City")],
+    ciudades_grandes={"Acapulco": acapulco, "Chilpancingo": chilpancingo},
+)
+
 MEX = Pais(
     nombre="Estados Unidos Mexicanos",
     nombre_comun="México",
