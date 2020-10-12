@@ -11,13 +11,11 @@ Para aprender más ve a `la documentación <https://tacosdedatos-utils.readthedo
 
 Módulos
 -------
-.. currentmodule:: tacosdedatos_utils
+.. currentmodule:: latam
 
 .. autosummary::
    :toctree: generado/nivel-mas-alto/
    :nosignatures:
 
-   manejo_de_archivos
-   manejo_de_proyectos
-   manejo_de_datos
-   viz
+   paises
+   norte
