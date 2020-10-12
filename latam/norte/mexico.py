@@ -185,7 +185,7 @@ saltillo = Ciudad(
     nombre_pronunciacion_local="sal'.ti.ʝo",
     latlong=(25.43, -101.00),
     fecha_de_fundacion=dt.date(1577, 7, 25),
-    huso_horario="America/Chihuahua",
+    huso_horario=timezone("America/Chihuahua"),
 )
 
 COAH = Subdivision(
