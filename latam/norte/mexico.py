@@ -15,8 +15,8 @@
 | Guerrero (GRO)              |   Chilpancingo      |
 | Hidalgo (HGO)               |   Pachuca           |
 | Jalisco (JAL)               |   Guadalajara       |
-| State of Mexico (EM)        |   Toluca            |
-| Mexico City (CDMX)          |   Mexico City       |
+| Estado de México (EM)       |   Toluca            |
+| Ciudad de México (CDMX)     |   Mexico City       |
 | Michoacán (MICH)            |   Morelia           |
 | Morelos (MOR)               |   Cuernavaca        |
 | Nayarit (NAY)               |   Tepic             |
@@ -56,6 +56,7 @@ aguascalientes = Ciudad(
 AGU = Subdivision(
     nombre="Aguascalientes",
     nombre_comun="Aguascalientes",
+    nombres_nativos={},
     abrev="AGS",
     nombre_pronunciacion_local="a.ɣ̞was.ka'.ljen̟.tes",
     codigo="AGU",
@@ -94,6 +95,7 @@ mexicali = Ciudad(
 BC = Subdivision(
     nombre="Baja California",
     nombre_comun="Baja California",
+    nombres_nativos={},
     abrev="BC",
     nombre_pronunciacion_local="'ba.xa. ka.li'.for.nja",
     codigo="BCN",
@@ -121,6 +123,7 @@ la_paz = Ciudad(
 BCS = Subdivision(
     nombre="Baja California Sur",
     nombre_comun="Baja California Sur",
+    nombres_nativos={},
     abrev="BCS",
     nombre_pronunciacion_local="'ba.xa. ka.li'.for.nja 'sur",
     codigo="BCS",
@@ -147,6 +150,7 @@ campeche = Ciudad(
 CAM = Subdivision(
     nombre="Campeche",
     nombre_comun="Campeche",
+    nombres_nativos={},
     abrev="CAM",
     nombre_pronunciacion_local="kam'pe.tʃe",
     codigo="CAM",
@@ -174,6 +178,7 @@ tuxtla_gutierrez = Ciudad(
 CHIS = Subdivision(
     nombre="Chiapas",
     nombre_comun="Chiapas",
+    nombres_nativos={},
     abrev="CHIS",
     nombre_pronunciacion_local="tʃjap'.as",
     codigo="CHP",
@@ -201,6 +206,7 @@ chihuahua = Ciudad(
 CHIH = Subdivision(
     nombre="Chihuahua",
     nombre_comun="Chihuahua",
+    nombres_nativos={},
     abrev="CHIH",
     nombre_pronunciacion_local="tʃi'.wa.wa",
     codigo="CHH",
@@ -228,6 +234,7 @@ saltillo = Ciudad(
 COAH = Subdivision(
     nombre="Coahuila de Zaragoza",
     nombre_comun="Coahuila",
+    nombres_nativos={},
     abrev="COAH",
     nombre_pronunciacion_local="koa'.wj.la ðe θa.ra'.ɣ̞o.θa",
     codigo="COA",
@@ -239,6 +246,73 @@ COAH = Subdivision(
     fecha_de_fundacion=dt.date(1824, 5, 7),
     husos_horarios=[timezone("America/Chihuahua")],
     ciudades_grandes={"Salitllo": saltillo},
+)
+
+colima = Ciudad(
+    nombre="Colima",
+    nombre_comun="Colima",
+    otros_nombres=["La Ciudad de las Palmeras"],
+    abrev="COL",
+    nombre_pronunciacion_local="ko'.li.ma",
+    latlong=(19.24, -103.73),
+    fecha_de_fundacion=dt.date(1527, 1, 20),
+    huso_horario=timezone("America/Mexico_City"),
+)
+
+manzanillo = Ciudad(
+    nombre="Manzanillo",
+    nombre_comun="Manzanillo",
+    otros_nombres=["Capital Mundial del Pez Vela", "Esmeralda del Pacífico"],
+    abrev="MZO",
+    nombre_pronunciacion_local="man.sa'.ni.jo",
+    latlong=(19.05, -104.31),
+    fecha_de_fundacion=dt.date(1537, 7, 24),
+    huso_horario=timezone("America/Mexico_City"),
+)
+
+COL = Subdivision(
+    nombre="Colima",
+    nombre_comun="Colima",
+    nombres_nativos={},
+    abrev="COL",
+    nombre_pronunciacion_local="ko'.li.ma",
+    codigo="Col",
+    capital=colima,
+    capital_horario=timezone("America/Mexico_City"),
+    capital_latlong=colima.latlong,
+    es_contigua=True,
+    es_isla=False,
+    fecha_de_fundacion=dt.date(1856, 12, 9),
+    husos_horarios=[timezone("America/Mexico_City")],
+    ciudades_grandes={"Colima": colima, "Manzanillo": manzanillo},
+)
+
+durango = Ciudad(
+    nombre="Victoria de Durango",
+    nombre_comun="Durango",
+    otros_nombres=["La Perla del Guadiana", "La Tierra del Cine"],
+    abrev="DUR",
+    nombre_pronunciacion_local="du'.ɾaŋ.ɡo",
+    latlong=(24.02, -104.67),
+    fecha_de_fundacion=dt.date(1563, 7, 8),
+    huso_horario=timezone("America/Mexico_City"),
+)
+
+DUR = Subdivision(
+    nombre="Durango",
+    nombre_comun="Durango",
+    nombres_nativos={"Tepehuán": "Korian", "Nahuatl": "Tepēhuahcān"},
+    abrev="DUR",
+    nombre_pronunciacion_local="du'.ɾaŋ.ɡo",
+    codigo="DUR",
+    capital=durango,
+    capital_horario=timezone("America/Mexico_City"),
+    capital_latlong=durango.latlong,
+    es_contigua=True,
+    es_isla=False,
+    fecha_de_fundacion=dt.date(1824, 5, 22),
+    husos_horarios=[timezone("America/Mexico_City")],
+    ciudades_grandes={"Durango": durango},
 )
 
 MEX = Pais(
@@ -268,5 +342,7 @@ MEX = Pais(
         "Chiapas": CHIS,
         "Cihuahua": CHIH,
         "Coahuila": COAH,
+        "Colima": COL,
+        "Durango": DUR,
     },
 )

@@ -53,6 +53,11 @@ class Subdivision:
         El nombre oficial de la ciudad. Por ejemplo, Ciudad Autónoma de Buenos Aires en lugar de Buenos Aires.
     nombre_comun: str
         El nombre de la ciudad (puede ser el mismo que el oficial). Por ejemplo, Buenos Aires en lugar de Ciudad Autónooma de Buenos Aires.
+    nombres_nativos: Dict[str, str]
+        Nombre otorgado a la subdivisión por los nativos de la región. Por ejemplo, el estado de Durango, México es conocido como Korian en Tepehuán y Tepēhuahcān en Nahuatl.
+        El diccionario tiene como llave (key) la lengua nativa y el valor (value) es el nombre de la subdivisión en dicha lengua.
+        Ejemplo:
+            DUR = Subdivision(..., nombres_nativos={"Tepehuán": "Korian", "Nahuatl": "Tepēhuahcān"}, ...)
     abrev: str
         Abreviación del nombre.
     nombre_pronunciacion_local: str
@@ -79,6 +84,7 @@ class Subdivision:
 
     nombre: str
     nombre_comun: str
+    nombres_nativos: Dict[str, str]
     abrev: str
     nombre_pronunciacion_local: str
     codigo: str
