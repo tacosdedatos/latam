@@ -1,4 +1,41 @@
-"""Estados Unidos Mexicanos."""
+"""Estados Unidos Mexicanos.
+
+|       Estado (Abrev.)       |        Capital      |
+|:---------------------------:|:--------------------|
+| Aguascalientes (AGS)        |   Aguascalientes    |
+| Baja California (BC)        |   Mexicali          |
+| Baja California Sur (BCS)   |   La Paz            |
+| Campeche (CAM)              |   Campeche          |
+| Chiapas (CHIS)              |   Tuxtla Gutiérrez  |
+| Chihuahua (CHIH)            |   Chihuahua         |
+| Coahuila (COAH)             |   Saltillo          |
+| Colima (COL)                |   Colima            |
+| Durango (DUR)               |   Durango           |
+| Guanajuato (GTO)            |   Guanajuato        |
+| Guerrero (GRO)              |   Chilpancingo      |
+| Hidalgo (HGO)               |   Pachuca           |
+| Jalisco (JAL)               |   Guadalajara       |
+| State of Mexico (EM)        |   Toluca            |
+| Mexico City (CDMX)          |   Mexico City       |
+| Michoacán (MICH)            |   Morelia           |
+| Morelos (MOR)               |   Cuernavaca        |
+| Nayarit (NAY)               |   Tepic             |
+| Nuevo León (NL)             |   Monterrey         |
+| Oaxaca (OAX)                |   Oaxaca            |
+| Puebla (PUE)                |   Puebla            |
+| Querétaro (QRO)             |   Querétaro         |
+| Quintana Roo (QR)           |   Chetumal          |
+| San Luis Potosí (SLP)       |   San Luis Potosí   |
+| Sinaloa (SNL)               |   Culiacán          |
+| Sonora (SON)                |   Hermosillo        |
+| Tabasco (TAB)               |   Villahermosa      |
+| Tamaulipas (TAMPS)          |   Victoria          |
+| Tlaxcala (TLAX)             |   Tlaxcala          |
+| Veracruz (VER)              |   Xalapa            |
+| Yucatán (YUC)               |   Mérida            |
+| Zacatecas (ZAC)             |   Zacatecas         |
+"""
+
 import datetime as dt
 
 from pytz import timezone
