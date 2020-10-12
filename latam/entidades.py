@@ -3,7 +3,7 @@
 from typing import Dict, List, Optional, Tuple
 
 import datetime as dt
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 
 
 @dataclass
