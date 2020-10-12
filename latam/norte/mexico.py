@@ -315,6 +315,54 @@ DUR = Subdivision(
     ciudades_grandes={"Durango": durango},
 )
 
+guanajuato = Ciudad(
+    nombre="Guanajuato",
+    nombre_comun="Guanajuato",
+    otros_nombres=[
+        "Lugar montañoso de ranas",
+        "Mo-o-ti (Chichimecas)",
+        "Paxtitlan (Mexicas)",
+        "Kuanasïuatu (Purépecha)",
+    ],
+    abrev="GTO",
+    nombre_pronunciacion_local="gwa.na'.xwa.to",
+    latlong=(21.02, -101.26),
+    fecha_de_fundacion=dt.date(1546, 1, 1),  # Desconocido dia y mes.
+    huso_horario=timezone("America/Mexico_City"),
+)
+
+leon = Ciudad(
+    nombre="León de Los Aldama",
+    nombre_comun="León",
+    otros_nombres=[
+        "La Perla del Bajío",
+        "La Capital Mundial del Calzado",
+        "La Ciudad Esmeralda",
+    ],
+    abrev="LEO",
+    nombre_pronunciacion_local="le'on",
+    latlong=(21.12, -101.68),
+    fecha_de_fundacion=dt.date(1576, 1, 20),
+    huso_horario=timezone("America/Mexico_City"),
+)
+
+GTO = Subdivision(
+    nombre="Guanajuato",
+    nombre_comun="Guanajuato",
+    nombres_nativos={"Purépecha": "kuanhasï juáta"},
+    abrev="GTO",
+    nombre_pronunciacion_local="gwa.na'.xwa.to",
+    codigo="GUA",
+    capital=guanajuato,
+    capital_horario=timezone("America/Mexico_City"),
+    capital_latlong=guanajuato.latlong,
+    es_contigua=True,
+    es_isla=False,
+    fecha_de_fundacion=dt.date(1823, 12, 20),
+    husos_horarios=[timezone("America/Mexico_City")],
+    ciudades_grandes={"Guanajuato": guanajuato, "León": leon},
+)
+
 MEX = Pais(
     nombre="Estados Unidos Mexicanos",
     nombre_comun="México",
@@ -344,5 +392,6 @@ MEX = Pais(
         "Coahuila": COAH,
         "Colima": COL,
         "Durango": DUR,
+        "Guanajuato": GTO,
     },
 )
