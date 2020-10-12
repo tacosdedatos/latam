@@ -1,4 +1,4 @@
-myst-nb==0.8.4
+myst-nb==0.10.1
 sphinx-tabs==1.1.13
 sphinxcontrib-bibtex==1.0.0
 sphinx-book-theme==0.0.27
