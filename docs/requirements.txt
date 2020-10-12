@@ -1,7 +1,7 @@
 myst-nb==0.10.1
 sphinx-tabs==1.1.13
 sphinxcontrib-bibtex==1.0.0
-sphinx-book-theme==0.0.27
+sphinx-book-theme==0.0.38
 importlib_metadata==1.6.1
 tacosdedatos-utils
 pandas==1.0.5
