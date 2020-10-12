@@ -40,7 +40,7 @@ pytz = "^2020.1"
 
 [tool.poetry.dev-dependencies]
 darglint = "^1.5.4"
-isort = "^5.5.4"
+isort = "^5.6.3"
 pyupgrade = "^2.7.2"
 black = "^20.8b1"
 mypy = "^0.782"
