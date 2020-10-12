@@ -1,4 +1,4 @@
-"""Estados Unidos Mexicanos"""
+"""Estados Unidos Mexicanos."""
 import datetime as dt
 
 from pytz import timezone
