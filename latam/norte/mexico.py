@@ -456,7 +456,7 @@ guadalajara = Ciudad(
     nombre_pronunciacion_local="ɡwa.ða.la'.xa.ɾa",
     latlong=(20.67, -103.35),
     fecha_de_fundacion=dt.date(1524, 2, 14),
-    huso_horario=timezone("America/Guadalajara"),
+    huso_horario=timezone("America/Mexico_City"),
 )
 
 JAL = Subdivision(
@@ -472,7 +472,7 @@ JAL = Subdivision(
     es_contigua=True,
     es_isla=False,
     fecha_de_fundacion=dt.date(1823, 12, 23),
-    husos_horarios=[timezone("America/Guadalajara")],
+    husos_horarios=[timezone("America/Mexico_City")],
     ciudades_grandes={"Guadalajara": guadalajara},
 )
 
