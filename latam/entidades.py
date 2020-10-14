@@ -63,7 +63,9 @@ class Subdivision:
     nombre_pronunciacion_local: str
         Pronunciación (fonética) del nombre en el idioma local.
     codigo: str
-        Código de 3 dígitos según el formato ISO-3611-2.
+        Código de 3 caracteres según el formato ISO-3611-2.
+    codigo_numerico: int
+        Código númerico asociado con esta subdivisión. Estos se utilizarán para servir los datos geográficos. Por ejemplo, el código ISO-3611-2 de Baja California, México es MX-BCN y su código númerico sería el código de México (484) y el de Baja California (002), o sea 484002.
     capital: Ciudad
         La capital en forma de objeto latam.entidades.Ciudad.
     capital_horario: pytz.timezone
@@ -88,6 +90,7 @@ class Subdivision:
     abrev: str
     nombre_pronunciacion_local: str
     codigo: str
+    codigo_numerico: int
     capital: Ciudad
     capital_horario: dt.tzinfo
     capital_latlong: Tuple[float, float]
