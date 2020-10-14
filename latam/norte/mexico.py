@@ -510,6 +510,36 @@ EM = Subdivision(
     ciudades_grandes={"Toluca": toluca},
 )
 
+ciudad_de_mexico = Ciudad(
+    nombre="Ciudad de México",
+    nombre_comun="Ciudad de México",
+    otros_nombres=[
+        "Āltepētl Mēxihco (Náhuatl)",
+    ],
+    abrev="CDMX",
+    nombre_pronunciacion_local="sju'.ða(ð) ðe 'me.xi.ko",
+    latlong=(19.43, -99.13),
+    fecha_de_fundacion=dt.date(1325, 3, 13),
+    huso_horario=timezone("America/Mexico_City"),
+)
+
+CDMX = Subdivision(
+    nombre="Ciudad de México",
+    nombre_comun="Ciudad de México",
+    nombres_nativos={"Náhuatl": "Āltepētl Mēxihco"},
+    abrev="CDMX",
+    nombre_pronunciacion_local="sju'.ða(ð) ðe 'me.xi.ko",
+    codigo="CMX",
+    capital=ciudad_de_mexico,
+    capital_horario=timezone("America/Mexico_City"),
+    capital_latlong=ciudad_de_mexico.latlong,
+    es_contigua=True,
+    es_isla=False,
+    fecha_de_fundacion=dt.date(2016, 1, 29),
+    husos_horarios=[timezone("America/Mexico_City")],
+    ciudades_grandes={"Ciudad de México": ciudad_de_mexico},
+)
+
 MEX = Pais(
     nombre="Estados Unidos Mexicanos",
     nombre_comun="México",
@@ -543,5 +573,6 @@ MEX = Pais(
         "Hidalgo": HGO,
         "Jalisco": JAL,
         "Estado de México": EM,
+        "Ciudad de México": CDMX,
     },
 )
