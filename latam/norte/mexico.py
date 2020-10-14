@@ -301,7 +301,7 @@ durango = Ciudad(
 DUR = Subdivision(
     nombre="Durango",
     nombre_comun="Durango",
-    nombres_nativos={"Tepehuán": "Korian", "Nahuatl": "Tepēhuahcān"},
+    nombres_nativos={"Tepehuán": "Korian", "Náhuatl": "Tepēhuahcān"},
     abrev="DUR",
     nombre_pronunciacion_local="du'.ɾaŋ.ɡo",
     codigo="DUR",
@@ -369,7 +369,7 @@ chilpancingo = Ciudad(
     otros_nombres=[
         "Ciudad Bravo",
         "Lugar de Avispa",
-        "Chilpantsinko (Nahuatl)",
+        "Chilpantsinko (Náhuatl)",
     ],
     abrev="CHIL",
     nombre_pronunciacion_local="tʃil.pan'.siŋ.ɡo",
@@ -462,7 +462,7 @@ guadalajara = Ciudad(
 JAL = Subdivision(
     nombre="Jalisco",
     nombre_comun="Jalisco",
-    nombres_nativos={"Nahuatl": "Tlahtohcayotl Xalixco"},
+    nombres_nativos={"Náhuatl": "Tlahtohcayotl Xalixco"},
     abrev="JAL",
     nombre_pronunciacion_local="xa'.lis.ko",
     codigo="JAL",
@@ -474,6 +474,40 @@ JAL = Subdivision(
     fecha_de_fundacion=dt.date(1823, 12, 23),
     husos_horarios=[timezone("America/Guadalajara")],
     ciudades_grandes={"Guadalajara": guadalajara},
+)
+
+toluca = Ciudad(
+    nombre="Toluca de Lerdo",
+    nombre_comun="Toluca",
+    otros_nombres=[
+        "Tollohcan (Náhuatl)",
+        "Nzehñi (Otomí)",
+        "Imbomáani (Matlatzinca)",
+        "Tsindijets (Tlahuica)",
+        "Zúmi (Mazahua)",
+    ],
+    abrev="TOL",
+    nombre_pronunciacion_local="to'.lu.ka",
+    latlong=(19.29, -99.66),
+    fecha_de_fundacion=dt.date(1812, 12, 13),
+    huso_horario=timezone("America/Mexico_City"),
+)
+
+EM = Subdivision(
+    nombre="Estado de México",
+    nombre_comun="Estado de México",
+    nombres_nativos={"Náhuatl": "Mēxihco"},
+    abrev="EdoMex",
+    nombre_pronunciacion_local="es'.ta.ðo ðe 'me.xi.ko",
+    codigo="MEX",
+    capital=toluca,
+    capital_horario=timezone("America/Mexico_City"),
+    capital_latlong=toluca.latlong,
+    es_contigua=True,
+    es_isla=False,
+    fecha_de_fundacion=dt.date(1823, 12, 20),
+    husos_horarios=[timezone("America/Mexico_City")],
+    ciudades_grandes={"Toluca": toluca},
 )
 
 MEX = Pais(
@@ -508,5 +542,6 @@ MEX = Pais(
         "Guanajuato": GTO,
         "Hidalgo": HGO,
         "Jalisco": JAL,
+        "Estado de México": EM,
     },
 )
