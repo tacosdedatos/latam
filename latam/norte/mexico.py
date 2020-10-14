@@ -442,6 +442,40 @@ HGO = Subdivision(
     ciudades_grandes={"Pachuca": pachuca},
 )
 
+guadalajara = Ciudad(
+    nombre="Guadalajara",
+    nombre_comun="Guadalajara",
+    otros_nombres=[
+        "La Perla de Occidente",
+        "La Perla Tapatía",
+        "La Ciudad de las Rosas",
+        "Ciudad madre imperial",
+        "وادي الحجارة (wādī al-ḥajārah)",
+    ],
+    abrev="Guad",
+    nombre_pronunciacion_local="ɡwa.ða.la'.xa.ɾa",
+    latlong=(20.67, -103.35),
+    fecha_de_fundacion=dt.date(1524, 2, 14),
+    huso_horario=timezone("America/Guadalajara"),
+)
+
+JAL = Subdivision(
+    nombre="Jalisco",
+    nombre_comun="Jalisco",
+    nombres_nativos={"Nahuatl": "Tlahtohcayotl Xalixco"},
+    abrev="JAL",
+    nombre_pronunciacion_local="xa'.lis.ko",
+    codigo="JAL",
+    capital=guadalajara,
+    capital_horario=timezone("America/Mexico_City"),
+    capital_latlong=guadalajara.latlong,
+    es_contigua=True,
+    es_isla=False,
+    fecha_de_fundacion=dt.date(1823, 12, 23),
+    husos_horarios=[timezone("America/Guadalajara")],
+    ciudades_grandes={"Guadalajara": guadalajara},
+)
+
 MEX = Pais(
     nombre="Estados Unidos Mexicanos",
     nombre_comun="México",
