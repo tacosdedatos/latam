@@ -540,6 +540,36 @@ CDMX = Subdivision(
     ciudades_grandes={"Ciudad de México": ciudad_de_mexico},
 )
 
+morelia = Ciudad(
+    nombre="Morelia",
+    nombre_comun="Morelia",
+    otros_nombres=[
+        "Valladolid",
+    ],
+    abrev="MOR",
+    nombre_pronunciacion_local="mo'.ɾe.lja",
+    latlong=(19.77, -101.19),
+    fecha_de_fundacion=dt.date(1541, 1, 1),  # Día y mes desconocidos.
+    huso_horario=timezone("America/Mexico_City"),
+)
+
+MICH = Subdivision(
+    nombre="Michoacán de Ocampo",
+    nombre_comun="Michoacán",
+    nombres_nativos={"Náhuatl": "Michhuahcān"},
+    abrev="MICH",
+    nombre_pronunciacion_local="mi.tʃoa'.kan de o'.kam.po",
+    codigo="MIC",
+    capital=morelia,
+    capital_horario=timezone("America/Mexico_City"),
+    capital_latlong=morelia.latlong,
+    es_contigua=True,
+    es_isla=False,
+    fecha_de_fundacion=dt.date(1823, 12, 22),
+    husos_horarios=[timezone("America/Mexico_City")],
+    ciudades_grandes={"Morelia": morelia},
+)
+
 MEX = Pais(
     nombre="Estados Unidos Mexicanos",
     nombre_comun="México",
@@ -574,5 +604,6 @@ MEX = Pais(
         "Jalisco": JAL,
         "Estado de México": EM,
         "Ciudad de México": CDMX,
+        "Michoacán": MICH,
     },
 )
