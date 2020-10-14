@@ -507,5 +507,6 @@ MEX = Pais(
         "Durango": DUR,
         "Guanajuato": GTO,
         "Hidalgo": HGO,
+        "Jalisco": JAL,
     },
 )
