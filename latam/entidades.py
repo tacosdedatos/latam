@@ -142,6 +142,10 @@ class Pais:
         Huso horarios de la subdivisión. En general, cada subdivisión tiene un solo huso horario pero no siempre.
     subdivisiones: Dict[str, Subdivision]
         Diccionario de subdivisiones que comprenden el país.
+    df: pandas.DataFrame
+        Un DataFrame de pandas de una fila con la información del país.
+    subdivisiones_df: pandas.DataFrame
+        Un DataFrame de pandas con la información de cada subdivision el país.
     """
 
     nombre: str
