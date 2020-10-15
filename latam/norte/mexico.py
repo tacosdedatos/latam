@@ -617,6 +617,35 @@ MOR = Subdivision(
     ciudades_grandes={"Cuernavaca": cuernavaca},
 )
 
+tepic = Ciudad(
+    nombre="Tepic",
+    nombre_comun="Tepic",
+    otros_nombres=[],
+    abrev="TEP",
+    nombre_pronunciacion_local="te'.pik",
+    latlong=(21.51, -104.89),
+    fecha_de_fundacion=dt.date(1531, 11, 18),
+    huso_horario=timezone("America/Hermosillo"),
+)
+
+NAY = Subdivision(
+    nombre="Nayarit",
+    nombre_comun="Nayarit",
+    nombres_nativos={},
+    abrev="NAY",
+    nombre_pronunciacion_local="na.ʝa'.ɾit",
+    codigo="NAY",
+    codigo_numerico=18,
+    capital=tepic,
+    capital_horario=timezone("America/Hermosillo"),
+    capital_latlong=tepic.latlong,
+    es_contigua=True,
+    es_isla=False,
+    fecha_de_fundacion=dt.date(1917, 1, 26),
+    husos_horarios=[timezone("America/Hermosillo")],
+    ciudades_grandes={"Tepic": tepic},
+)
+
 MEX = Pais(
     nombre="Estados Unidos Mexicanos",
     nombre_comun="México",
@@ -653,5 +682,6 @@ MEX = Pais(
         "Ciudad de México": CDMX,
         "Michoacán": MICH,
         "Morelos": MOR,
+        "Nayarit": NAY,
     },
 )
