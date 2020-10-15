@@ -679,6 +679,38 @@ NL = Subdivision(
     ciudades_grandes={"Monterrey": monterrey},
 )
 
+oaxaca = Ciudad(
+    nombre="Oaxaca de Juárez",
+    nombre_comun="Oaxaca",
+    otros_nombres=[
+        "Huaxyacac (Nahuatl)",
+        "La Verde Antequera",
+    ],
+    abrev="OAX",
+    nombre_pronunciacion_local="wa'.xa.ka",
+    latlong=(7.08, -96.75),
+    fecha_de_fundacion=dt.date(1532, 4, 25),
+    huso_horario=timezone("America/Mexico_City"),
+)
+
+OAX = Subdivision(
+    nombre="Oaxaca",
+    nombre_comun="Oaxaca",
+    nombres_nativos={"Nahuatl": "Huāxyacac"},
+    abrev="OAX",
+    nombre_pronunciacion_local="wa'.xa.ka",
+    codigo="OAX",
+    codigo_numerico=20,
+    capital=oaxaca,
+    capital_horario=timezone("America/Mexico_City"),
+    capital_latlong=oaxaca.latlong,
+    es_contigua=True,
+    es_isla=False,
+    fecha_de_fundacion=dt.date(1823, 12, 21),
+    husos_horarios=[timezone("America/Mexico_City")],
+    ciudades_grandes={"Oaxaca de Juárez": oaxaca},
+)
+
 MEX = Pais(
     nombre="Estados Unidos Mexicanos",
     nombre_comun="México",
@@ -717,5 +749,6 @@ MEX = Pais(
         "Morelos": MOR,
         "Nayarit": NAY,
         "Nuevo León": NL,
+        "Oaxaca": OAX,
     },
 )
