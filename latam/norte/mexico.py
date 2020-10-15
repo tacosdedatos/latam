@@ -776,6 +776,37 @@ QRO = Subdivision(
     ciudades_grandes={"Queretaro": queretaro},
 )
 
+chetumal = Ciudad(
+    nombre="Chetumal",
+    nombre_comun="Chetumal",
+    otros_nombres=[
+        "Chactemàal (Maya Yucateco)",
+    ],
+    abrev="CHE",
+    nombre_pronunciacion_local="tʃe.tu.'mal",
+    latlong=(18.50, -88.31),
+    fecha_de_fundacion=dt.date(1898, 5, 5),
+    huso_horario=timezone("America/Cancun"),
+)
+
+QR = Subdivision(
+    nombre="Quintana Roo",
+    nombre_comun="Queretaro",
+    nombres_nativos={},
+    abrev="QR",
+    nombre_pronunciacion_local="kin'.ta.na 'roo",
+    codigo="ROO",
+    codigo_numerico=23,
+    capital=chetumal,
+    capital_horario=timezone("America/Cancun"),
+    capital_latlong=chetumal.latlong,
+    es_contigua=True,
+    es_isla=False,
+    fecha_de_fundacion=dt.date(1974, 10, 8),
+    husos_horarios=[timezone("America/Cancun")],
+    ciudades_grandes={"Chetumal": chetumal},
+)
+
 MEX = Pais(
     nombre="Estados Unidos Mexicanos",
     nombre_comun="México",
@@ -794,6 +825,7 @@ MEX = Pais(
         timezone("America/Tijuana"),
         timezone("America/Hermosillo"),
         timezone("America/Mexico_City"),
+        timezone("America/Cancun"),
     ],
     subdivisiones={
         "Aguascalientes": AGU,
@@ -817,5 +849,6 @@ MEX = Pais(
         "Oaxaca": OAX,
         "Puebla": PUE,
         "Queretaro": QRO,
+        "Quintana Roo": QR,
     },
 )
