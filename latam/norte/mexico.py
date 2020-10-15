@@ -708,7 +708,7 @@ OAX = Subdivision(
     es_isla=False,
     fecha_de_fundacion=dt.date(1823, 12, 21),
     husos_horarios=[timezone("America/Mexico_City")],
-    ciudades_grandes={"Oaxaca de Juárez": oaxaca},
+    ciudades_grandes={"Oaxaca": oaxaca},
 )
 
 puebla = Ciudad(
