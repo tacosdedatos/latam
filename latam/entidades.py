@@ -53,12 +53,19 @@ class Subdivision:
         El nombre oficial de la ciudad. Por ejemplo, Ciudad Autónoma de Buenos Aires en lugar de Buenos Aires.
     nombre_comun: str
         El nombre de la ciudad (puede ser el mismo que el oficial). Por ejemplo, Buenos Aires en lugar de Ciudad Autónooma de Buenos Aires.
+    nombres_nativos: Dict[str, str]
+        Nombre otorgado a la subdivisión por los nativos de la región. Por ejemplo, el estado de Durango, México es conocido como Korian en Tepehuán y Tepēhuahcān en Nahuatl.
+        El diccionario tiene como llave (key) la lengua nativa y el valor (value) es el nombre de la subdivisión en dicha lengua.
+        Ejemplo:
+            DUR = Subdivision(..., nombres_nativos={"Tepehuán": "Korian", "Nahuatl": "Tepēhuahcān"}, ...)
     abrev: str
         Abreviación del nombre.
     nombre_pronunciacion_local: str
         Pronunciación (fonética) del nombre en el idioma local.
     codigo: str
-        Código de 3 dígitos según el formato ISO-3611-2.
+        Código de 3 caracteres según el formato ISO-3611-2.
+    codigo_numerico: int
+        Código númerico asociado con esta subdivisión. Estos se utilizarán para servir los datos geográficos. Por ejemplo, el código ISO-3611-2 de Baja California, México es MX-BCN y su código númerico sería el código de México (484) y el de Baja California (002), o sea 484002.
     capital: Ciudad
         La capital en forma de objeto latam.entidades.Ciudad.
     capital_horario: pytz.timezone
@@ -79,9 +86,11 @@ class Subdivision:
 
     nombre: str
     nombre_comun: str
+    nombres_nativos: Dict[str, str]
     abrev: str
     nombre_pronunciacion_local: str
     codigo: str
+    codigo_numerico: int
     capital: Ciudad
     capital_horario: dt.tzinfo
     capital_latlong: Tuple[float, float]
