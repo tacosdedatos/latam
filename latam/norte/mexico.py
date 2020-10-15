@@ -868,6 +868,35 @@ SNL = Subdivision(
     ciudades_grandes={"Culiacán": culiacan},
 )
 
+hermosillo = Ciudad(
+    nombre="Hermosillo",
+    nombre_comun="Hermosillo",
+    otros_nombres=["La Ciudad del Sol"],
+    abrev="HER",
+    nombre_pronunciacion_local="eɾ.mo'.si.ʝo",
+    latlong=(29.09, -110.95),
+    fecha_de_fundacion=dt.date(1700, 5, 18),
+    huso_horario=timezone("America/Hermosillo"),
+)
+
+SON = Subdivision(
+    nombre="Sonora",
+    nombre_comun="Sonora",
+    nombres_nativos={},
+    abrev="SON",
+    nombre_pronunciacion_local="so'.no.ɾa",
+    codigo="SON",
+    codigo_numerico=26,
+    capital=hermosillo,
+    capital_horario=timezone("America/Hermosillo"),
+    capital_latlong=hermosillo.latlong,
+    es_contigua=True,
+    es_isla=False,
+    fecha_de_fundacion=dt.date(1824, 1, 10),
+    husos_horarios=[timezone("America/Hermosillo")],
+    ciudades_grandes={"Hermosillo": hermosillo},
+)
+
 MEX = Pais(
     nombre="Estados Unidos Mexicanos",
     nombre_comun="México",
@@ -913,5 +942,6 @@ MEX = Pais(
         "Quintana Roo": QR,
         "San Luis Potosí": SLP,
         "Sinaloa": SNL,
+        "Sonora": SON,
     },
 )
