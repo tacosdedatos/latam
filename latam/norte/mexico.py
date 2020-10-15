@@ -955,6 +955,35 @@ TAMPS = Subdivision(
     ciudades_grandes={"Ciudad Victoria": ciudad_victoria},
 )
 
+tlaxcala = Ciudad(
+    nombre="Tlaxcala de Xicohténcat",
+    nombre_comun="Tlaxcala",
+    otros_nombres=[],
+    abrev="TLAX",
+    nombre_pronunciacion_local="tla(k)s'.ka.la",
+    latlong=(19.31, -98.24),
+    fecha_de_fundacion=dt.date(1525, 10, 3),
+    huso_horario=timezone("America/Mexico_City"),
+)
+
+TLAX = Subdivision(
+    nombre="Tlaxcala",
+    nombre_comun="Tlaxcala",
+    nombres_nativos={"Nahuatl": "Tlaxcallān"},
+    abrev="TLAX",
+    nombre_pronunciacion_local="tla(k)s'.ka.la",
+    codigo="TLA",
+    codigo_numerico=29,
+    capital=tlaxcala,
+    capital_horario=timezone("America/Mexico_City"),
+    capital_latlong=tlaxcala.latlong,
+    es_contigua=True,
+    es_isla=False,
+    fecha_de_fundacion=dt.date(1856, 12, 9),
+    husos_horarios=[timezone("America/Mexico_City")],
+    ciudades_grandes={"Tlaxcala": tlaxcala},
+)
+
 MEX = Pais(
     nombre="Estados Unidos Mexicanos",
     nombre_comun="México",
@@ -1003,5 +1032,6 @@ MEX = Pais(
         "Sonora": SON,
         "Tabasco": TAB,
         "Tamaulipas": TAMPS,
+        "Tlaxcala": TLAX,
     },
 )
