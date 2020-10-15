@@ -984,6 +984,35 @@ TLAX = Subdivision(
     ciudades_grandes={"Tlaxcala": tlaxcala},
 )
 
+xalapa = Ciudad(
+    nombre="Xalapa-Enríquez",
+    nombre_comun="Xalapa",
+    otros_nombres=["La Ciudad de las Flores"],
+    abrev="XAL",
+    nombre_pronunciacion_local="xa.'la.pa",
+    latlong=(19.54, -96.93),
+    fecha_de_fundacion=dt.date(1791, 12, 18),
+    huso_horario=timezone("America/Mexico_City"),
+)
+
+VER = Subdivision(
+    nombre="Veracruz de Ignacio de la Llave",
+    nombre_comun="Veracruz",
+    nombres_nativos={},
+    abrev="VER",
+    nombre_pronunciacion_local="be.ɾa'.kɾus",
+    codigo="VER",
+    codigo_numerico=30,
+    capital=xalapa,
+    capital_horario=timezone("America/Mexico_City"),
+    capital_latlong=xalapa.latlong,
+    es_contigua=True,
+    es_isla=False,
+    fecha_de_fundacion=dt.date(1823, 12, 22),
+    husos_horarios=[timezone("America/Mexico_City")],
+    ciudades_grandes={"Xalapa": xalapa},
+)
+
 MEX = Pais(
     nombre="Estados Unidos Mexicanos",
     nombre_comun="México",
@@ -1033,5 +1062,6 @@ MEX = Pais(
         "Tabasco": TAB,
         "Tamaulipas": TAMPS,
         "Tlaxcala": TLAX,
+        "Veracruz": VER,
     },
 )
