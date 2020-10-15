@@ -1013,6 +1013,35 @@ VER = Subdivision(
     ciudades_grandes={"Xalapa": xalapa},
 )
 
+merida = Ciudad(
+    nombre="Merida",
+    nombre_comun="Merida",
+    otros_nombres=[],
+    abrev="MER",
+    nombre_pronunciacion_local="'me.ɾi.ða",
+    latlong=(20.97, -89.62),
+    fecha_de_fundacion=dt.date(1542, 1, 6),
+    huso_horario=timezone("America/Mexico_City"),
+)
+
+YUC = Subdivision(
+    nombre="Yucatán",
+    nombre_comun="Yucatán",
+    nombres_nativos={},
+    abrev="YUC",
+    nombre_pronunciacion_local="ɟʝu.ka.'tan",
+    codigo="YUC",
+    codigo_numerico=31,
+    capital=merida,
+    capital_horario=timezone("America/Mexico_City"),
+    capital_latlong=merida.latlong,
+    es_contigua=True,
+    es_isla=False,
+    fecha_de_fundacion=dt.date(1823, 12, 23),
+    husos_horarios=[timezone("America/Mexico_City")],
+    ciudades_grandes={"Mérida": merida},
+)
+
 MEX = Pais(
     nombre="Estados Unidos Mexicanos",
     nombre_comun="México",
@@ -1062,6 +1091,7 @@ MEX = Pais(
         "Tabasco": TAB,
         "Tamaulipas": TAMPS,
         "Tlaxcala": TLAX,
-        "Veracruz": VER,
+        "Veracrz": VER,
+        "Yucatán": YUC,
     },
 )
