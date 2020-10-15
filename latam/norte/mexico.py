@@ -711,6 +711,40 @@ OAX = Subdivision(
     ciudades_grandes={"Oaxaca de Juárez": oaxaca},
 )
 
+puebla = Ciudad(
+    nombre="Heroica Puebla de Zaragoza",
+    nombre_comun="Puebla",
+    otros_nombres=[
+        "Cuetlaxcoapan (Nahuatl)",
+        "El relicario de América",
+        "La ciudad de los Ángeles",
+        "La Angelópolis",
+    ],
+    abrev="PUE",
+    nombre_pronunciacion_local="'pwe.βla",
+    latlong=(19.03, -98.18),
+    fecha_de_fundacion=dt.date(1531, 4, 16),
+    huso_horario=timezone("America/Mexico_City"),
+)
+
+PUE = Subdivision(
+    nombre="Puebla",
+    nombre_comun="Puebla",
+    nombres_nativos={"Nahuatl": "Cuetlaxcoapan"},
+    abrev="PUE",
+    nombre_pronunciacion_local="'pwe.βla",
+    codigo="PUE",
+    codigo_numerico=21,
+    capital=puebla,
+    capital_horario=timezone("America/Mexico_City"),
+    capital_latlong=puebla.latlong,
+    es_contigua=True,
+    es_isla=False,
+    fecha_de_fundacion=dt.date(1823, 12, 21),
+    husos_horarios=[timezone("America/Mexico_City")],
+    ciudades_grandes={"Puebla": puebla},
+)
+
 MEX = Pais(
     nombre="Estados Unidos Mexicanos",
     nombre_comun="México",
@@ -750,5 +784,6 @@ MEX = Pais(
         "Nayarit": NAY,
         "Nuevo León": NL,
         "Oaxaca": OAX,
+        "Puebla": PUE,
     },
 )
