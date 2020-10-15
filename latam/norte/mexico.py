@@ -1042,6 +1042,39 @@ YUC = Subdivision(
     ciudades_grandes={"Mérida": merida},
 )
 
+zacatecas = Ciudad(
+    nombre="Zacatecas",
+    nombre_comun="Zacatecas",
+    otros_nombres=[
+        "Civilizadora del Norte",
+        "Ciudad de Cantera",
+        "Corazón de Plata",
+    ],
+    abrev="ZAC",
+    nombre_pronunciacion_local="sa.ka.'te.kas",
+    latlong=(22.77, -102.57),
+    fecha_de_fundacion=dt.date(1546, 9, 8),
+    huso_horario=timezone("America/Mexico_City"),
+)
+
+ZAC = Subdivision(
+    nombre="Zacatecas",
+    nombre_comun="Zacatecas",
+    nombres_nativos={},
+    abrev="ZAC",
+    nombre_pronunciacion_local="sa.ka.'te.kas",
+    codigo="ZAC",
+    codigo_numerico=32,
+    capital=zacatecas,
+    capital_horario=timezone("America/Mexico_City"),
+    capital_latlong=zacatecas.latlong,
+    es_contigua=True,
+    es_isla=False,
+    fecha_de_fundacion=dt.date(1823, 12, 23),
+    husos_horarios=[timezone("America/Mexico_City")],
+    ciudades_grandes={"Zacatecas": zacatecas},
+)
+
 MEX = Pais(
     nombre="Estados Unidos Mexicanos",
     nombre_comun="México",
@@ -1093,5 +1126,6 @@ MEX = Pais(
         "Tlaxcala": TLAX,
         "Veracrz": VER,
         "Yucatán": YUC,
+        "Zacatecas": ZAC,
     },
 )
