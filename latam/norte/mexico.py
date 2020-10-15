@@ -807,6 +807,38 @@ QR = Subdivision(
     ciudades_grandes={"Chetumal": chetumal},
 )
 
+san_luis_potosi = Ciudad(
+    nombre="San Luis Potosí",
+    nombre_comun="San Luis Potosí",
+    otros_nombres=[
+        "San Luis de la Patria",
+        "La Ciudad de los Jardines",
+    ],
+    abrev="SLP",
+    nombre_pronunciacion_local="san 'lwis po.to.'si",
+    latlong=(22.15, -100.99),
+    fecha_de_fundacion=dt.date(1592, 11, 3),
+    huso_horario=timezone("America/Mexico_City"),
+)
+
+SLP = Subdivision(
+    nombre="San Luis Potosí",
+    nombre_comun="San Luis Potosí",
+    nombres_nativos={},
+    abrev="SLP",
+    nombre_pronunciacion_local="san 'lwis po.to.'si",
+    codigo="SLP",
+    codigo_numerico=24,
+    capital=san_luis_potosi,
+    capital_horario=timezone("America/Mexico_City"),
+    capital_latlong=san_luis_potosi.latlong,
+    es_contigua=True,
+    es_isla=False,
+    fecha_de_fundacion=dt.date(1823, 12, 22),
+    husos_horarios=[timezone("America/Mexico_City")],
+    ciudades_grandes={"San Luis Potosí": san_luis_potosi},
+)
+
 MEX = Pais(
     nombre="Estados Unidos Mexicanos",
     nombre_comun="México",
@@ -850,5 +882,6 @@ MEX = Pais(
         "Puebla": PUE,
         "Queretaro": QRO,
         "Quintana Roo": QR,
+        "San Luis Potosí": SLP,
     },
 )
