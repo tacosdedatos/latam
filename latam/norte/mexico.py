@@ -745,6 +745,37 @@ PUE = Subdivision(
     ciudades_grandes={"Puebla": puebla},
 )
 
+queretaro = Ciudad(
+    nombre="Santiago de Queretaro",
+    nombre_comun="Queretaro",
+    otros_nombres=[
+        "Dähnini Maxei (Otomí)",
+    ],
+    abrev="QRO",
+    nombre_pronunciacion_local="ke'.ɾe.ta.ɾo",
+    latlong=(20.59, -100.39),
+    fecha_de_fundacion=dt.date(1531, 7, 25),
+    huso_horario=timezone("America/Mexico_City"),
+)
+
+QRO = Subdivision(
+    nombre="Querétaro de Arteaga",
+    nombre_comun="Queretaro",
+    nombres_nativos={"Otomí": "Hyodi Ndämxei"},
+    abrev="QRO",
+    nombre_pronunciacion_local="ke'.ɾe.ta.ɾo",
+    codigo="QUE",
+    codigo_numerico=22,
+    capital=queretaro,
+    capital_horario=timezone("America/Mexico_City"),
+    capital_latlong=queretaro.latlong,
+    es_contigua=True,
+    es_isla=False,
+    fecha_de_fundacion=dt.date(1823, 12, 23),
+    husos_horarios=[timezone("America/Mexico_City")],
+    ciudades_grandes={"Queretaro": queretaro},
+)
+
 MEX = Pais(
     nombre="Estados Unidos Mexicanos",
     nombre_comun="México",
@@ -785,5 +816,6 @@ MEX = Pais(
         "Nuevo León": NL,
         "Oaxaca": OAX,
         "Puebla": PUE,
+        "Queretaro": QRO,
     },
 )
