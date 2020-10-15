@@ -646,6 +646,39 @@ NAY = Subdivision(
     ciudades_grandes={"Tepic": tepic},
 )
 
+monterrey = Ciudad(
+    nombre="Monterrey",
+    nombre_comun="Monterrey",
+    otros_nombres=[
+        "La sultana del norte",
+        "La Ciudad de las Montañas",
+        "La Capital Industrial de México.",
+    ],
+    abrev="MTY",
+    nombre_pronunciacion_local="mon.te'.rej",
+    latlong=(25.67, -100.30),
+    fecha_de_fundacion=dt.date(1529, 9, 20),
+    huso_horario=timezone("America/Mexico_City"),
+)
+
+NL = Subdivision(
+    nombre="Nuevo León",
+    nombre_comun="Nuevo León",
+    nombres_nativos={},
+    abrev="NL",
+    nombre_pronunciacion_local="'nwe.βo le.'on",
+    codigo="NLE",
+    codigo_numerico=19,
+    capital=monterrey,
+    capital_horario=timezone("America/Mexico_City"),
+    capital_latlong=monterrey.latlong,
+    es_contigua=True,
+    es_isla=False,
+    fecha_de_fundacion=dt.date(1824, 5, 17),
+    husos_horarios=[timezone("America/Mexico_City")],
+    ciudades_grandes={"Monterrey": monterrey},
+)
+
 MEX = Pais(
     nombre="Estados Unidos Mexicanos",
     nombre_comun="México",
@@ -683,5 +716,6 @@ MEX = Pais(
         "Michoacán": MICH,
         "Morelos": MOR,
         "Nayarit": NAY,
+        "Nuevo León": NL,
     },
 )
