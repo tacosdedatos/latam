@@ -839,6 +839,35 @@ SLP = Subdivision(
     ciudades_grandes={"San Luis Potosí": san_luis_potosi},
 )
 
+culiacan = Ciudad(
+    nombre="Culiacán Rosales",
+    nombre_comun="Culiacán",
+    otros_nombres=["La Perla del Humaya", "Colhuacán (Nahuatl)"],
+    abrev="CUL",
+    nombre_pronunciacion_local="ku.lja.'kan",
+    latlong=(24.81, -107.39),
+    fecha_de_fundacion=dt.date(1531, 9, 29),
+    huso_horario=timezone("America/Hermosillo"),
+)
+
+SNL = Subdivision(
+    nombre="Sinaloa",
+    nombre_comun="Sinaloa",
+    nombres_nativos={},
+    abrev="SNL",
+    nombre_pronunciacion_local="si.na'.loa",
+    codigo="SNL",
+    codigo_numerico=25,
+    capital=culiacan,
+    capital_horario=timezone("America/Hermosillo"),
+    capital_latlong=culiacan.latlong,
+    es_contigua=True,
+    es_isla=False,
+    fecha_de_fundacion=dt.date(1830, 10, 14),
+    husos_horarios=[timezone("America/Hermosillo")],
+    ciudades_grandes={"Culiacán": culiacan},
+)
+
 MEX = Pais(
     nombre="Estados Unidos Mexicanos",
     nombre_comun="México",
@@ -883,5 +912,6 @@ MEX = Pais(
         "Queretaro": QRO,
         "Quintana Roo": QR,
         "San Luis Potosí": SLP,
+        "Sinaloa": SNL,
     },
 )
