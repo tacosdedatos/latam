@@ -586,6 +586,37 @@ MICH = Subdivision(
     ciudades_grandes={"Morelia": morelia},
 )
 
+cuernavaca = Ciudad(
+    nombre="Cuernavaca",
+    nombre_comun="Cuernavaca",
+    otros_nombres=["La ciudad de la eterna primavera", "Cuauhnāhuac (Nahuatl)"],
+    abrev="CUE",
+    nombre_pronunciacion_local="kweɾ.na'.βa.ka",
+    latlong=(18.92, -99.23),
+    fecha_de_fundacion=dt.date(
+        1529, 6, 6
+    ),  # Fundada como Villa del Marquesado del Valle de Oaxaca
+    huso_horario=timezone("America/Mexico_City"),
+)
+
+MOR = Subdivision(
+    nombre="Morelos",
+    nombre_comun="Morelos",
+    nombres_nativos={},
+    abrev="MOR",
+    nombre_pronunciacion_local="mo'.ɾe.los",
+    codigo="MOR",
+    codigo_numerico=17,
+    capital=cuernavaca,
+    capital_horario=timezone("America/Mexico_City"),
+    capital_latlong=cuernavaca.latlong,
+    es_contigua=True,
+    es_isla=False,
+    fecha_de_fundacion=dt.date(1869, 4, 17),
+    husos_horarios=[timezone("America/Mexico_City")],
+    ciudades_grandes={"Cuernavaca": cuernavaca},
+)
+
 MEX = Pais(
     nombre="Estados Unidos Mexicanos",
     nombre_comun="México",
@@ -621,5 +652,6 @@ MEX = Pais(
         "Estado de México": EM,
         "Ciudad de México": CDMX,
         "Michoacán": MICH,
+        "Morelos": MOR,
     },
 )
