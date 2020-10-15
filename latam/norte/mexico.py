@@ -926,6 +926,35 @@ TAB = Subdivision(
     ciudades_grandes={"Villahermosa": villahermosa},
 )
 
+ciudad_victoria = Ciudad(
+    nombre="Ciudad Victoria",
+    nombre_comun="Ciudad Victoria",
+    otros_nombres=[],
+    abrev="CDV",
+    nombre_pronunciacion_local="sju'.ðað βik'.to.ɾja",
+    latlong=(23.73, -99.13),
+    fecha_de_fundacion=dt.date(1750, 10, 6),
+    huso_horario=timezone("America/Mexico_City"),
+)
+
+TAMPS = Subdivision(
+    nombre="Tamaulipas",
+    nombre_comun="Tamaulipas",
+    nombres_nativos={},
+    abrev="TAMPS",
+    nombre_pronunciacion_local="ta.maw'.li.pas",
+    codigo="TAM",
+    codigo_numerico=27,
+    capital=ciudad_victoria,
+    capital_horario=timezone("America/Mexico_City"),
+    capital_latlong=ciudad_victoria.latlong,
+    es_contigua=True,
+    es_isla=False,
+    fecha_de_fundacion=dt.date(1824, 2, 7),
+    husos_horarios=[timezone("America/Mexico_City")],
+    ciudades_grandes={"Ciudad Victoria": ciudad_victoria},
+)
+
 MEX = Pais(
     nombre="Estados Unidos Mexicanos",
     nombre_comun="México",
@@ -973,5 +1002,6 @@ MEX = Pais(
         "Sinaloa": SNL,
         "Sonora": SON,
         "Tabasco": TAB,
+        "Tamaulipas": TAMPS,
     },
 )
