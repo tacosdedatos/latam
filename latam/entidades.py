@@ -3,7 +3,9 @@
 from typing import Dict, List, Optional, Tuple
 
 import datetime as dt
-from dataclasses import dataclass, field
+from dataclasses import dataclass
+
+import pandas as pd
 
 
 @dataclass
@@ -140,6 +142,10 @@ class Pais:
         Huso horarios de la subdivisión. En general, cada subdivisión tiene un solo huso horario pero no siempre.
     subdivisiones: Dict[str, Subdivision]
         Diccionario de subdivisiones que comprenden el país.
+    df: pandas.DataFrame
+        Un DataFrame de pandas de una fila con la información del país.
+    subdivisiones_df: pandas.DataFrame
+        Un DataFrame de pandas con la información de cada subdivision el país.
     """
 
     nombre: str
@@ -160,3 +166,60 @@ class Pais:
 
     def __repr__(self):
         return f"<{self.__class__.__name__}:{self.nombre_comun}>"
+
+    def _pais_df(self) -> pd.DataFrame:
+        pais_data = {
+            "abrev": self.abrev,
+            "alpha_2": self.alpha_2,
+            "alpha_3": self.alpha_3,
+            "capital": self.capital,
+            "capital_horario": self.capital_horario,
+            "capital_lat": self.capital_latlong[0],
+            "capital_long": self.capital_latlong[1],
+            "codigo": self.codigo,
+            "es_independiente": self.es_independiente,
+            "es_isla": self.es_isla,
+            "fecha_independencia": self.fecha_independencia,
+            "huso_horario": self.husos_horarios,
+            "nombre": self.nombre,
+            "nombre_comun": self.nombre_comun,
+            "nombre_pronunciacion_local": self.nombre_pronunciacion_local,
+            "subdivisiones": [
+                subdivision.nombre
+                for subdivision in self.subdivisiones.values()
+            ],
+        }
+        return pd.DataFrame(data=[pais_data])
+
+    def _subdivision_df(self) -> pd.DataFrame:
+        subdivision_data = []
+        for key, subdivision in self.subdivisiones.items():
+            subdivision_data.append(
+                {
+                    "abrev": subdivision.abrev,
+                    "capital": subdivision.capital.nombre,
+                    "capital_horario": subdivision.capital_horario,
+                    "capital_lat": subdivision.capital_latlong[0],
+                    "capital_long": subdivision.capital_latlong[1],
+                    "alpha_2": subdivision.codigo,
+                    "codigo_numerico": subdivision.codigo_numerico,
+                    "es_contigua": subdivision.es_contigua,
+                    "es_isla": subdivision.es_isla,
+                    "fecha_de_fundacion": subdivision.fecha_de_fundacion,
+                    "huso_horario": subdivision.husos_horarios[0],
+                    "nombre": subdivision.nombre,
+                    "nombre_comun": subdivision.nombre_comun,
+                    "nombre_pronunciacion_local": subdivision.nombre_pronunciacion_local,
+                    "nombres_nativos": ",".join(
+                        [
+                            f"{value} ({key})"
+                            for key, value in subdivision.nombres_nativos.items()
+                        ]
+                    ),
+                }
+            )
+        return pd.DataFrame(subdivision_data)
+
+    def __post_init__(self):
+        self.df = self._pais_df()
+        self.subdivisiones_df = self._subdivision_df()
