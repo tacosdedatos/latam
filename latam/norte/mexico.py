@@ -688,7 +688,7 @@ oaxaca = Ciudad(
     ],
     abrev="OAX",
     nombre_pronunciacion_local="wa'.xa.ka",
-    latlong=(7.08, -96.75),
+    latlong=(17.08, -96.75),
     fecha_de_fundacion=dt.date(1532, 4, 25),
     huso_horario=timezone("America/Mexico_City"),
 )
