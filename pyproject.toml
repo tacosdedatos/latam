@@ -6,7 +6,7 @@ build-backend = "poetry.masonry.api"
 
 [tool.poetry]
 name = "latam"
-version = "0.1.2.1"
+version = "0.1.2.2"
 description = "Un paquete para trabajar facilmente con metadatos de paises en latinoamerica."
 readme = "README.md"
 authors = [
