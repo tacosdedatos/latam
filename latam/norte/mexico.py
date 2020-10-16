@@ -1106,6 +1106,7 @@ MEX = Pais(
         "Colima": COL,
         "Durango": DUR,
         "Guanajuato": GTO,
+        "Guerrero": GRO,
         "Hidalgo": HGO,
         "Jalisco": JAL,
         "Estado de México": EM,
